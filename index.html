@@ -1,171 +1,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ashutosh Patidar | Senior Business Analyst</title>
+    <title>Ashutosh Patidar | Consultant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
 
 <style>
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    background: #000;
     color: #fff;
+    overflow-x: hidden;
 }
 
-header {
-    padding: 120px 20px;
+/* Full Screen Section */
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
     text-align: center;
 }
 
-h1 { font-size: 48px; margin-bottom: 10px; }
+/* Hero */
+.hero h1 {
+    font-size: 64px;
+    font-weight: 900;
+}
 
-h2 { font-weight: 400; color: #aaa; }
-
-p {
-    color: #ccc;
-    max-width: 850px;
-    margin: 10px auto;
+.hero p {
+    font-size: 20px;
+    color: #aaa;
+    max-width: 700px;
 }
 
 .btn {
-    display: inline-block;
-    margin: 15px 10px;
-    padding: 12px 28px;
+    margin-top: 30px;
+    padding: 14px 32px;
+    background: #0077ff;
     border-radius: 30px;
     text-decoration: none;
     color: white;
-    background: #0077ff;
     transition: 0.3s;
 }
 
-.btn:hover { background: #0055cc; }
-
-section { padding: 80px 20px; text-align: center; }
-
-.card {
-    background: #1f1f1f;
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,123,255,0.2);
-    transition: 0.3s;
+.btn:hover {
+    background: #0055cc;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px rgba(0,123,255,0.5);
+/* Large Text Section */
+.big-text {
+    font-size: 56px;
+    font-weight: 800;
+    max-width: 900px;
+    line-height: 1.2;
 }
 
+/* Metrics */
 .metrics {
     display: flex;
-    justify-content: center;
+    gap: 60px;
     flex-wrap: wrap;
-    gap: 40px;
 }
 
-.metric { 
-    font-size: 36px; 
-    font-weight: 700; 
+.metric {
+    font-size: 60px;
+    font-weight: 800;
 }
 
-.metric-label { 
-    font-size: 14px; 
-    color: #aaa; 
+.metric-label {
+    color: #aaa;
 }
 
+/* Scroll reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Project Blocks */
+.project {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.project h2 {
+    font-size: 40px;
+}
+
+.project p {
+    color: #bbb;
+}
+
+/* Timeline */
 .timeline {
-    max-width: 850px;
-    margin: auto;
-    text-align: left;
+    position: relative;
+    max-width: 800px;
 }
 
-.timeline-item { margin-bottom: 30px; }
-
-.skills span {
-    display: inline-block;
-    background: #292929;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 20px;
-    font-size: 14px;
+.timeline-item {
+    margin: 40px 0;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 footer {
     padding: 40px;
     text-align: center;
-    color: #888;
+    color: #777;
 }
-
-a { color: #0077ff; }
-.timeline-container {
-    position: relative;
-    max-width: 900px;
-    margin: 50px auto;
-    padding-left: 40px;
-}
-
-.timeline-line {
-    position: absolute;
-    left: 18px;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(to bottom, #0077ff, #00d4ff);
-    border-radius: 2px;
-}
-
-.timeline-block {
-    position: relative;
-    margin-bottom: 50px;
-    padding-left: 30px;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: -26px;
-    top: 5px;
-    width: 18px;
-    height: 18px;
-    background: #0077ff;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #0077ff;
-}
-
-.timeline-content {
-    background: #1f1f1f;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,123,255,0.2);
-    transition: 0.3s;
-}
-
-.timeline-content:hover {
-    transform: translateX(8px);
-    box-shadow: 0 0 25px rgba(0,123,255,0.5);
-}
-
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<section class="section hero">
     <h1>Ashutosh Patidar</h1>
-    <h2>Consultant | Senior Business Analyst</h2>
-    <p>Results-driven Business Analyst with 3+ years of experience in analytics, KPI frameworks, automation, and operational optimization.</p>
-
-    <a href="#projects" class="btn">View Key Work</a>
+    <p>Consultant & Senior Business Analyst transforming complex systems into measurable business outcomes.</p>
     <a href="Ashutosh_Patidar_Resume.pdf" class="btn" download>Download Resume</a>
-</header>
+</section>
 
-<!-- IMPACT SNAPSHOT -->
-<section>
-    <h2>Impact Snapshot</h2>
-    <div class="metrics">
+<!-- BIG STATEMENT -->
+<section class="section">
+    <div class="big-text reveal">
+        I build structured solutions.<br>
+        I automate inefficiencies.<br>
+        I measure impact.
+    </div>
+</section>
+
+<!-- IMPACT METRICS -->
+<section class="section">
+    <div class="metrics reveal">
         <div>
             <div class="metric" id="counter1">0</div>
             <div class="metric-label">% Reporting Time Reduced</div>
@@ -181,101 +161,55 @@ a { color: #0077ff; }
     </div>
 </section>
 
-<!-- PROJECT HIGHLIGHTS -->
-<section id="projects">
-    <h2>Selected Work & Contributions</h2>
-
-    <div class="card">
-        <h3>Power BI Dashboard Transformation</h3>
-        <p><strong>Challenge:</strong> Leadership lacked real-time portfolio visibility.</p>
-        <p><strong>Action:</strong> Designed Power BI dashboards and Excel-based KPI tracking frameworks.</p>
-        <p><strong>Impact:</strong> Reduced reporting turnaround time by 30%.</p>
+<!-- PROJECT STORY -->
+<section class="section">
+    <div class="project reveal">
+        <h2>Power BI Transformation</h2>
+        <p>Designed KPI dashboards that gave leadership real-time visibility and reduced reporting time by 30%.</p>
     </div>
 
-    <div class="card">
-        <h3>Automation of Recurring Reporting</h3>
-        <p><strong>Challenge:</strong> High manual effort in monthly reporting cycles.</p>
-        <p><strong>Action:</strong> Built automation using Power Query and Macros.</p>
-        <p><strong>Impact:</strong> Cut manual effort by 40% and improved accuracy.</p>
+    <div class="project reveal">
+        <h2>Automation at Scale</h2>
+        <p>Built Power Query & Macro-driven reporting systems cutting manual effort by 40%.</p>
     </div>
 
-    <div class="card">
-        <h3>Process Mapping & Workflow Optimization</h3>
-        <p><strong>Challenge:</strong> Inefficient cross-functional workflows.</p>
-        <p><strong>Action:</strong> Created structured process maps and standardized documentation.</p>
-        <p><strong>Impact:</strong> Improved workflow efficiency by 20%.</p>
+    <div class="project reveal">
+        <h2>Process Optimization</h2>
+        <p>Mapped and redesigned cross-functional workflows improving operational efficiency by 20%.</p>
     </div>
 </section>
 
-<!-- HOW I WORK -->
-<section>
-    <h2>How I Approach Business Analysis</h2>
-    <p><strong>Problem Structuring:</strong> Break down ambiguity into measurable components.</p>
-    <p><strong>Stakeholder Alignment:</strong> Engage early to reduce rework.</p>
-    <p><strong>KPI-Driven Execution:</strong> Define measurable success before solution design.</p>
-    <p><strong>Automation Mindset:</strong> Build scalable systems, not temporary fixes.</p>
-</section>
-
-<!-- CAREER JOURNEY -->
-<!-- CAREER JOURNEY -->
-<section>
-    <h2>Career Growth Journey</h2>
-
-    <div class="timeline-container">
-        <div class="timeline-line"></div>
-
-        <div class="timeline-block">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Associate Consultant (2022–2023)</h3>
-                <p>Executed process optimization pilots, developed BRDs/FRDs, and conducted ROI analysis for automation initiatives.</p>
-            </div>
-        </div>
-
-        <div class="timeline-block">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Senior Associate Consultant (2023–2025)</h3>
-                <p>Led KPI dashboard initiatives, automated reporting using Power Query & Macros, and improved reporting time by 30%.</p>
-            </div>
-        </div>
-
-        <div class="timeline-block">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Consultant (2025–Present)</h3>
-                <p>Driving workflow optimization, backlog refinement, and structured process mapping for enterprise teams.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- SKILLS -->
-<section>
-    <h2>Core Skills & Tools</h2>
-    <div class="skills">
-        <span>Advanced Excel</span>
-        <span>Power BI</span>
-        <span>Power Query</span>
-        <span>SQL</span>
-        <span>Financial Modelling</span>
-        <span>Jira</span>
-        <span>Agile & SDLC</span>
-        <span>KPI Framework Design</span>
-        <span>Automation</span>
+<!-- CAREER STORY -->
+<section class="section">
+    <div class="timeline reveal">
+        <div class="timeline-item">2022 — Associate Consultant</div>
+        <div class="timeline-item">2023 — Senior Associate Consultant</div>
+        <div class="timeline-item">2025 — Consultant</div>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Ashutosh Patidar | 
-    <a href="https://www.linkedin.com/in/ashutosh-patidar-635bba152/" target="_blank">
-    Connect on LinkedIn</a></p>
+    © 2026 Ashutosh Patidar |
+    <a href="https://www.linkedin.com/in/ashutosh-patidar-635bba152/" target="_blank">LinkedIn</a>
 </footer>
 
-<!-- FIXED COUNTER SCRIPT -->
 <script>
+/* Scroll Reveal */
+function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        }
+    }
+}
+window.addEventListener("scroll", revealOnScroll);
+
+/* Counter Animation */
 document.addEventListener("DOMContentLoaded", function() {
 
     function animateCounter(id, endValue, duration) {
