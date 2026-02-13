@@ -123,4 +123,161 @@ body {
 }
 
 .final-cta h2 {
-    font-si
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.final-cta p {
+    color: #aaa;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid #0077ff;
+}
+
+.btn.outline:hover {
+    background: #0077ff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="section hero">
+    <h1>Ashutosh Patidar</h1>
+    <p>Consultant & Senior Business Analyst</p>
+    <p>Transforming complex systems into measurable business outcomes.</p>
+    <a href="Ashutosh_Patidar_Resume.pdf" class="btn" download>Download Resume</a>
+</section>
+
+<!-- BIG STATEMENT -->
+<section class="section">
+    <div class="big-text reveal">
+        I build structured solutions.<br>
+        I automate inefficiencies.<br>
+        I measure impact.
+    </div>
+</section>
+
+<!-- IMPACT METRICS -->
+<section class="section">
+    <div class="metrics reveal">
+        <div>
+            <div class="metric" id="counter1">0</div>
+            <div class="metric-label">% Reporting Time Reduced</div>
+        </div>
+        <div>
+            <div class="metric" id="counter2">0</div>
+            <div class="metric-label">% Manual Effort Automated</div>
+        </div>
+        <div>
+            <div class="metric" id="counter3">0</div>
+            <div class="metric-label">% Workflow Efficiency Improved</div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECT STORY -->
+<section class="section">
+    <div class="project reveal">
+        <h2>Power BI Transformation</h2>
+        <p>Designed KPI dashboards that gave leadership real-time visibility and reduced reporting time by 30%.</p>
+    </div>
+
+    <div class="project reveal">
+        <h2>Automation at Scale</h2>
+        <p>Built Power Query & Macro-driven reporting systems cutting manual effort by 40%.</p>
+    </div>
+
+    <div class="project reveal">
+        <h2>Process Optimization</h2>
+        <p>Mapped and redesigned cross-functional workflows improving operational efficiency by 20%.</p>
+    </div>
+</section>
+
+<!-- CAREER STORY -->
+<section class="section">
+    <div class="timeline reveal">
+        <div class="timeline-item">2022 — Associate Consultant</div>
+        <div class="timeline-item">2023 — Senior Associate Consultant</div>
+        <div class="timeline-item">2025 — Consultant</div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section final-cta reveal">
+    <h2>Let’s Build Better Systems Together.</h2>
+    <p>If you're looking for a structured, data-driven Business Analyst who delivers measurable impact — let’s connect.</p>
+
+    <div class="cta-buttons">
+        <a href="Ashutosh_Patidar_Resume.pdf" class="btn" download>
+            Download Resume
+        </a>
+
+        <a href="https://www.linkedin.com/in/ashutosh-patidar-635bba152/" 
+           class="btn outline" 
+           target="_blank">
+            Connect on LinkedIn
+        </a>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* Smooth Fade In + Fade Out */
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio > 0.15) {
+                entry.target.classList.add("visible");
+            } else {
+                entry.target.classList.remove("visible");
+            }
+        });
+    }, options);
+
+    document.querySelectorAll(".reveal").forEach(el => {
+        observer.observe(el);
+    });
+
+    /* Counter Animation */
+    function animateCounter(id, endValue, duration) {
+        let start = 0;
+        let counter = document.getElementById(id);
+        let stepTime = Math.abs(Math.floor(duration / endValue));
+
+        let timer = setInterval(function() {
+            start++;
+            counter.innerText = start;
+            if (start >= endValue) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    animateCounter("counter1", 30, 1500);
+    animateCounter("counter2", 40, 1500);
+    animateCounter("counter3", 20, 1500);
+
+});
+</script>
+
+</body>
+</html>
