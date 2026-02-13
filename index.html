@@ -82,11 +82,11 @@ body {
 /* Scroll reveal */
 .reveal {
     opacity: 0;
-    transform: translateY(60px);
-    transition: all 1s ease;
+    transform: translateY(80px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
-.reveal.active {
+.reveal.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -240,19 +240,25 @@ footer {
 
 <script>
 /* Scroll Reveal */
-function revealOnScroll() {
-    const reveals = document.querySelectorAll(".reveal");
-    for (let i = 0; i < reveals.length; i++) {
-        let windowHeight = window.innerHeight;
-        let elementTop = reveals[i].getBoundingClientRect().top;
-        let elementVisible = 100;
 
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
+/* Smooth Scroll Fade In & Fade Out */
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        } else {
+            entry.target.classList.remove("visible");
         }
-    }
-}
-window.addEventListener("scroll", revealOnScroll);
+    });
+}, {
+    threshold: 0.25
+});
+
+document.querySelectorAll(".reveal").forEach((el) => {
+    observer.observe(el);
+});
+
+
 
 /* Counter Animation */
 document.addEventListener("DOMContentLoaded", function() {
