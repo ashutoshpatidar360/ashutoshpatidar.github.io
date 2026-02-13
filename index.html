@@ -67,9 +67,15 @@ section { padding: 80px 20px; text-align: center; }
     gap: 40px;
 }
 
-.metric { font-size: 36px; font-weight: 700; }
+.metric { 
+    font-size: 36px; 
+    font-weight: 700; 
+}
 
-.metric-label { font-size: 14px; color: #aaa; }
+.metric-label { 
+    font-size: 14px; 
+    color: #aaa; 
+}
 
 .timeline {
     max-width: 850px;
@@ -93,6 +99,9 @@ footer {
     text-align: center;
     color: #888;
 }
+
+a { color: #0077ff; }
+
 </style>
 </head>
 
@@ -101,7 +110,7 @@ footer {
 <header>
     <h1>Ashutosh Patidar</h1>
     <h2>Consultant | Senior Business Analyst</h2>
-    <p>Results-driven Business Analyst with 3+ years of experience in performance analytics, operational optimization, KPI frameworks, and automation-driven reporting.</p>
+    <p>Results-driven Business Analyst with 3+ years of experience in analytics, KPI frameworks, automation, and operational optimization.</p>
 
     <a href="#projects" class="btn">View Key Work</a>
     <a href="Ashutosh_Patidar_Resume.pdf" class="btn" download>Download Resume</a>
@@ -134,9 +143,95 @@ footer {
         <h3>Power BI Dashboard Transformation</h3>
         <p><strong>Challenge:</strong> Leadership lacked real-time portfolio visibility.</p>
         <p><strong>Action:</strong> Designed Power BI dashboards and Excel-based KPI tracking frameworks.</p>
-        <p><strong>Impact:</strong> Reduced reporting turnaround time by 30% and improved decision transparency.</p>
+        <p><strong>Impact:</strong> Reduced reporting turnaround time by 30%.</p>
     </div>
 
     <div class="card">
         <h3>Automation of Recurring Reporting</h3>
-        <p><strong>Chal
+        <p><strong>Challenge:</strong> High manual effort in monthly reporting cycles.</p>
+        <p><strong>Action:</strong> Built automation using Power Query and Macros.</p>
+        <p><strong>Impact:</strong> Cut manual effort by 40% and improved accuracy.</p>
+    </div>
+
+    <div class="card">
+        <h3>Process Mapping & Workflow Optimization</h3>
+        <p><strong>Challenge:</strong> Inefficient cross-functional workflows.</p>
+        <p><strong>Action:</strong> Created structured process maps and standardized documentation.</p>
+        <p><strong>Impact:</strong> Improved workflow efficiency by 20%.</p>
+    </div>
+</section>
+
+<!-- HOW I WORK -->
+<section>
+    <h2>How I Approach Business Analysis</h2>
+    <p><strong>Problem Structuring:</strong> Break down ambiguity into measurable components.</p>
+    <p><strong>Stakeholder Alignment:</strong> Engage early to reduce rework.</p>
+    <p><strong>KPI-Driven Execution:</strong> Define measurable success before solution design.</p>
+    <p><strong>Automation Mindset:</strong> Build scalable systems, not temporary fixes.</p>
+</section>
+
+<!-- CAREER JOURNEY -->
+<section>
+    <h2>Career Journey</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <strong>2022–2023:</strong> Associate Consultant – Process pilots, ROI analysis, BRDs/FRDs.
+        </div>
+        <div class="timeline-item">
+            <strong>2023–2025:</strong> Senior Associate Consultant – KPI dashboards, automation initiatives.
+        </div>
+        <div class="timeline-item">
+            <strong>2025–Present:</strong> Consultant – Workflow optimization and backlog management.
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <h2>Core Skills & Tools</h2>
+    <div class="skills">
+        <span>Advanced Excel</span>
+        <span>Power BI</span>
+        <span>Power Query</span>
+        <span>SQL</span>
+        <span>Financial Modelling</span>
+        <span>Jira</span>
+        <span>Agile & SDLC</span>
+        <span>KPI Framework Design</span>
+        <span>Automation</span>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Ashutosh Patidar | 
+    <a href="https://www.linkedin.com/in/ashutosh-patidar-635bba152/" target="_blank">
+    Connect on LinkedIn</a></p>
+</footer>
+
+<!-- FIXED COUNTER SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    function animateCounter(id, endValue, duration) {
+        let start = 0;
+        let counter = document.getElementById(id);
+        let stepTime = Math.abs(Math.floor(duration / endValue));
+
+        let timer = setInterval(function() {
+            start++;
+            counter.innerText = start;
+            if (start >= endValue) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    animateCounter("counter1", 30, 1500);
+    animateCounter("counter2", 40, 1500);
+    animateCounter("counter3", 20, 1500);
+
+});
+</script>
+
+</body>
+</html>
