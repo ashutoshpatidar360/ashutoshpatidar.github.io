@@ -122,6 +122,37 @@ footer {
     text-align: center;
     color: #777;
 }
+.final-cta {
+    background: linear-gradient(to top, #0a0a0a, #000);
+}
+
+.final-cta h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.final-cta p {
+    color: #aaa;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid #0077ff;
+}
+
+.btn.outline:hover {
+    background: #0077ff;
+}
+    
 </style>
 </head>
 
@@ -188,10 +219,23 @@ footer {
     </div>
 </section>
 
-<footer>
-    © 2026 Ashutosh Patidar |
-    <a href="https://www.linkedin.com/in/ashutosh-patidar-635bba152/" target="_blank">LinkedIn</a>
-</footer>
+<!-- FINAL CTA SECTION -->
+<section class="section final-cta">
+    <h2>Let’s Build Better Systems Together.</h2>
+    <p>If you're looking for a structured, data-driven Business Analyst who delivers measurable impact — let’s connect.</p>
+
+    <div class="cta-buttons">
+        <a href="Ashutosh_Patidar_Resume.pdf" class="btn" download>
+            Download Resume
+        </a>
+
+        <a href="https://www.linkedin.com/in/ashutosh-patidar-635bba152/" 
+           class="btn outline" 
+           target="_blank">
+            Connect on LinkedIn
+        </a>
+    </div>
+</section>
 
 <script>
 /* Scroll Reveal */
