@@ -101,6 +101,52 @@ footer {
 }
 
 a { color: #0077ff; }
+.timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
+    padding-left: 40px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 18px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0077ff, #00d4ff);
+    border-radius: 2px;
+}
+
+.timeline-block {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 30px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -26px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background: #0077ff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0077ff;
+}
+
+.timeline-content {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,123,255,0.2);
+    transition: 0.3s;
+}
+
+.timeline-content:hover {
+    transform: translateX(8px);
+    box-shadow: 0 0 25px rgba(0,123,255,0.5);
+}
 
 </style>
 </head>
@@ -171,20 +217,40 @@ a { color: #0077ff; }
 </section>
 
 <!-- CAREER JOURNEY -->
+<!-- CAREER JOURNEY -->
 <section>
-    <h2>Career Journey</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <strong>2022–2023:</strong> Associate Consultant – Process pilots, ROI analysis, BRDs/FRDs.
+    <h2>Career Growth Journey</h2>
+
+    <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-block">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Associate Consultant (2022–2023)</h3>
+                <p>Executed process optimization pilots, developed BRDs/FRDs, and conducted ROI analysis for automation initiatives.</p>
+            </div>
         </div>
-        <div class="timeline-item">
-            <strong>2023–2025:</strong> Senior Associate Consultant – KPI dashboards, automation initiatives.
+
+        <div class="timeline-block">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Senior Associate Consultant (2023–2025)</h3>
+                <p>Led KPI dashboard initiatives, automated reporting using Power Query & Macros, and improved reporting time by 30%.</p>
+            </div>
         </div>
-        <div class="timeline-item">
-            <strong>2025–Present:</strong> Consultant – Workflow optimization and backlog management.
+
+        <div class="timeline-block">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Consultant (2025–Present)</h3>
+                <p>Driving workflow optimization, backlog refinement, and structured process mapping for enterprise teams.</p>
+            </div>
         </div>
+
     </div>
 </section>
+
 
 <!-- SKILLS -->
 <section>
